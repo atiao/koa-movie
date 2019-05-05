@@ -1,13 +1,19 @@
 const koa = require('Koa')
 const app = new koa()
-const { normal, ejsTpl, pugTpl} = require('./tpl')
+// const { pugTpl} = require('./tpl')
 // const ejs = require('ejs')
-const pug = require('pug')
+// const pug = require('pug')
+const views = require('koa-views')
+const {resolve} = require('path')
+
+app.use(views(resolve(__dirname, './views'), {
+    extension: 'pug'
+}))
+
 app.use(async (ctx, next) => {
-    ctx.type = "text/html; chartset=utf-8"
-    ctx.body = pug.render(pugTpl, {
-        name:'5555',
-        age: '6666'
+    await ctx.render('index', {
+        name: 666,
+        age:777
     })
 })
 
