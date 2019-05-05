@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/index.js"],"names":["changeTitle","window","$","html"],"mappings":";AAAA,SAASA,IACLC,OAAOC,EAAE,QAAQC,KAAK,SAG1BH","file":"js.2ba2874c.js","sourceRoot":"../parcel","sourcesContent":["function changeTitle () {\n    window.$('#app').html('打包～～～')\n}\n\nchangeTitle()"]}

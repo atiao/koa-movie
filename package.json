@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
+    "build": "parcel build parcel/index.html -- no-cache -d parcel/dist --public-url /dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,11 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "koa": "^2.7.0",
+    "koa-static": "^5.0.0",
     "koa-views": "^6.2.0",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.3"
   }
 }
