@@ -1,2 +1,1 @@
-* npm init 
-* 善用"start": "node server/index.js",
+https://gitee.com/wolf18387/douban-trailer-imooc
