@@ -5,7 +5,10 @@ const app = new koa()
 // const pug = require('pug')
 const views = require('koa-views')
 const {resolve} = require('path')
-
+const { connect } = require('./database/init')
+;(async () => {
+    await connect()
+})()
 app.use(views(resolve(__dirname, './views'), {
     extension: 'pug'
 }))
